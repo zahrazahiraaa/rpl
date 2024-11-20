@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Red Hat Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, select {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .button {
+            background-color: red;
+            color: white;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: darkred;
+        }
+        .link {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> <img src="redhat-white.PNG" alt="center"></h1>
+        <h2>Create a Red Hat Account</h2>
+        <p>Sign up and use this Red Hat account to access all of Red Hat’s applications, communities, support, and more!</p>
+        <p>
+            Red Hat will colloct yout contact and account inromation to create your Red Hat account. We use your personal data to identify you and to provide you with information, support, and customer service. for more information, please see red's hat's <a href="privasiprovision"> privasi provision</a>
+        </p>
+
+        <h3> join an exisiting account </h3>
+        <p>
+            access subriptions purchased by your company or organization by joining an exisiting account.
+        </p>
+        <p>
+            contact ypur organization administrator to join or contact <a href="customerservis"> customer service </a> with question.
+        </p>
+        
+        <form action="proses.php" method="POST">
+            <h3>Account Type</h3>
+            <p>
+                choose account type
+            </p>
+            <label>
+                <input type="radio" name="accountType" value="corporate" required> Corporate
+                <input type="radio" name="accountType" value="personal" required> Personal
+            </label>
+           
+
+            <h3>Login Information</h3>
+            
+            <label for="username">Choose RedHat Username*</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Choose RedHat Password*</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Confirm Password*</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <h3>Personal Information</h3>
+            <label for="firstName">First Name*</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name*</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="jobTitle">Job Title*</label>
+            <input type="text" id="jobTitle" name="jobTitle" required>
+
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone*</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <h3>Company Information*</h3>
+            <label for="companyName">Your Company Name*</label>
+            <input type="text" id="companyName" name="companyName" required>
+
+            <label for="country">Your Country*</label>
+            <select id="country" name="country" required>
+                <option value="">Choose your country</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="in">India</option>
+              
+            </select>
+
+            <label for="companyAddress">Your Company Address</label>
+            <input type="text" id="companyAddress" name="companyAddress" required>
+
+            <button type="submit" class="button">Create My Account</button>
+        </form>
+
+        <div class="link">
+            <a href="#">Back to Login Page</a>
+        </div>
+    </div>
+
+    
+</body>
+</html>
